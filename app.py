@@ -9,6 +9,7 @@ def main():
           1. Add
           2. Subtract
           3. Multiply
+          4. Divide
           """)
     
     user_input = input("Select the function")
@@ -18,10 +19,12 @@ def main():
 
     if user_input == "1":
         result = do_add(a, b)
-    elif:
+    elif user_input == "2":
         result = do_sub(a, b)
-    else:
+    elif user_input == "3":
         result = do_mult(a, b)
+    elif user_input == "4":
+        result = do_div(a, b)
     
     return print("Result: ", result)
 
