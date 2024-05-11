@@ -1,5 +1,6 @@
 from calc_func import do_add, do_sub, do_div
 from multiply import do_mul
+from area import cal_area_rec
 
 def main():
 
