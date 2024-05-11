@@ -1,4 +1,4 @@
-from calc_func import do_add, do_sub
+from calc_func import do_add, do_sub, do_div
 from multiply import do_mul
 
 def main():
