@@ -1,33 +1,18 @@
-from calc_func import do_add, do_sub, do_div
-from multiply import do_mul
-from area import cal_area_rec
+import streamlit as st
 
-def main():
+# Streamlit UI
+st.title("Power Calculator")
+st.write("Enter a number to calculate its square, cube, and fifth power.")
 
-    print("Welcom to Calculator")
-    print("""
-          \nSelect the function from the given options 
-          1. Add
-          2. Subtract
-          3. Multiply
-          4. Divide
-          """)
-    
-    user_input = input("Select the function")
+# Get user input
+n = st.number_input("Enter an integer", value=1, step=1)
 
-    a = int(input("Value of A "))
-    b = int(input("Value of B "))
+# Calculate results
+square = n ** 2
+cube = n ** 3
+fifth_power = n ** 5
 
-    if user_input == "1":
-        result = do_add(a, b)
-    elif user_input == "2":
-        result = do_sub(a, b)
-    elif user_input == "3":
-        result = do_mult(a, b)
-    elif user_input == "4":
-        result = do_div(a, b)
-    
-    return print("Result: ", result)
-
-if __name__ == "__main__":
-    main()
+# Display results
+st.write(f"The square of {n} is: {square}")
+st.write(f"The cube of {n} is: {cube}")
+st.write(f"The fifth power of {n} is: {fifth_power}")
